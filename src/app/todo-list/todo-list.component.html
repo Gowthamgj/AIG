@@ -1,0 +1,11 @@
+<div class="main" *ngIf="todos.length > 0">
+  <ul class="todo-list">
+    <div *ngFor="let todo of todos" [class.completed]="todo.complete">
+      <div class="alert alert-success alert-dismissible">
+        <input type="checkbox" (click)="toggleTodoComplete(todo)" [checked]="todo.todoCompleted"> {{ todo.id }}. {{ todo.title }}
+        <a class="close" data-dismiss="alert" aria-label="close" (click)="removeTodo(todo)">x</a>
+      </div>
+    </div>
+  </ul>
+</div>
+hbhj
